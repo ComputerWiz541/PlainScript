@@ -398,6 +398,9 @@ export function createGlobalEnv(beginTime: number = -1, filePath: string = __dir
         } else if (path.endsWith(".bsx")) {
             if(currency == "-") throw "Cannot run Bussin X from Bussin: " + path;
             input = transcribe(fs.readFileSync(path, "utf-8"), currency);
+        } else if (path.endsWith(".ps")) {
+            if(currency == "-") throw "Cannot run Bussin X from Bussin: " + path;
+            input = transcribe(fs.readFileSync(path, "utf-8"), currency);
         } else throw "Not a Bussin [X] file: " + path
         
         const parser = new Parser();
