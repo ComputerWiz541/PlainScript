@@ -1,7 +1,7 @@
 {
   "version": "1.7",
   "scripts": {
-    "bussin": "npx ts-node src/main.ts"
+    "ps": "npx ts-node src/main.ts"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
