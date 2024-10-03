@@ -26,7 +26,7 @@ async function run(filename: string) {
     let input = readFileSync(filename, 'utf-8') + "\nfinishExit()";
     
     let currency = "-";
-    if (filename.endsWith('.bsx')) {
+    if (filename.endsWith('.ts')) {
         const currencies = JSON.parse(readFileSync(__dirname + "/../src/utils/currencies.json", "utf-8")); // should work for /src/ and /dist/
         currency = await get_currency(currencies);
         input = transcribe(input, currency);
